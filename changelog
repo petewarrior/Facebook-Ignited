@@ -2,6 +2,8 @@
 ========== Change Log ==========
 ================================
 
+============ v1.0.7 ============
+# Upgraded the CodeIgniter to v2.1.0
 ============ v1.0.6 ============
 # Upgraded the Facebook PHP SDK to v3.1.1
 # Updated CodeIgniter to v2.0.3

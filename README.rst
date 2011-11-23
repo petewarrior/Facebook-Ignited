@@ -1,5 +1,5 @@
 =====================================
-Facebook Ignited v1.0.6 Documentation
+Facebook Ignited v1.0.7 Documentation
 =====================================
 Both of the projects merged into this project are open source projects.
 I make no claim to their origin just the work put into expanding on them 
@@ -9,7 +9,7 @@ You can view CodeIgniter at http://codeigniter.com and Facebook PHP SDK at
 https://github.com/facebook/php-sdk/ if you have any bugs regarding them please 
 check their coresponding sites. 
 
-As of this this version I am using CI v2.0.3 & FB SDK v3.1.1.
+As of this this version I am using CI v2.1.0 & FB SDK v3.1.1.
 
 Thanks! And I hope you enjoy this preconfigured version of Facebook Ignited!
 
