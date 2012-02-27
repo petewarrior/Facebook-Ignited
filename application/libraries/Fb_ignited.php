@@ -134,7 +134,7 @@ class Fb_ignited
 		return $eventID;
 	}
 	
-	function fb_feed($method, $id, $values)
+	function fb_feed($method, $id = null, $values = null)
 	{
 		if ($method == "post")
 		{
@@ -323,70 +323,6 @@ class Fb_ignited
 		}
 		$data['method'] = $func;
 		return json_encode($data);
-	}
-	
-	function fb_register_form($data, $attributes = "", $string = false)
-	{
-		/**
-		 * This function will create an iFrame for the register plugin and convert the arrays into JSON.
-		 */	
-		$field_string = '';
-		if ($string == false)
-		{
-			$field_string = "[";
-			foreach ($data as $key => $value)
-			{
-				if ($key > 0) { $field_string .= ", "; }
-				if (!is_array($value))
-				{
-					$field_string .= "{'name':'".$value."'}";
-				}
-				else
-				{	
-					$i = 0;			
-					foreach ($value as $key2 => $value2)
-					{
-						if ($i != 0) { $field_string .= ", "; }
-						$field_string .= "{'name':'".$key2."', 'description':'".$value2['0']."', 'type':'".$value2['1']."'";
-						if ($value2['1'] == 'select')
-						{
-							$field_string .= ", 'options':{";
-							$j = 0;
-							foreach ($value2['options'] as $key3 => $value3)
-							{
-								if ($j != 0) { $field_string .= ","; }
-								$field_string .= "'".$key3."':'".$value3."'";
-								$j++;
-							}		
-							$field_string .= "}";												
-							if ($value2['d'])
-							{ 
-								$field_string .= ", 'default':'".$value2['d']."'";
-							} 
-						}
-						elseif ($value2['1'] == 'typeahead')
-						{
-							$field_string .= ", 'categories':[";
-							$j = 0;
-							foreach ($value2['categories'] as $value3)
-							{
-								if ($j != 0) { $field_string .= ", "; }
-								$field_string .= "'".$value3."'";
-								$j++;
-							}
-							$field_string .= "]";
-						}
-						$field_string .= "}";
-						$i++;
-					}					
-				}
-			}
-			$field_string .= "]";
-		}
-		$result = "<iframe src='http://www.facebook.com/plugins/registration.php?
-			client_id=".$this->globals['fb_appid']."&redirect_uri=".urlencode($this->CI->facebook->getCurrentUrl()).
-			"&fields=".$field_string."' ".$attributes."></iframe>";
-		return $result;
 	}
 	
 	private function fb_set_globals($params)
