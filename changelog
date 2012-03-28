@@ -5,6 +5,7 @@
 ============ v1.0.8 ============
 # Fixed Git Issue #2 Autoload not correct
 # Removed the register form function because we can already use json_encode to do the same thing.
+# Added the custom redirect parameter to fb_login_url()
 ============ v1.0.7 ============
 # Upgraded the CodeIgniter to v2.1.0
 ============ v1.0.6 ============

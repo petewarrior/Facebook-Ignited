@@ -194,9 +194,12 @@ class Fb_ignited
 			try {
 				$me = $this->CI->facebook->api('/me');
 			} catch (FacebookApiException $e) {
-				if ($script == true): echo $this->fb_login_url(true);
-				else: $loc = $this->fb_login_url(); redirect($loc); endif;
-				exit;
+				if ($redirect == true)
+				{
+					if ($script == true): echo $this->fb_login_url(true);
+					else: $loc = $this->fb_login_url(); redirect($loc); endif;
+					exit;
+				}
 			}
 			return $me;
 		}
@@ -247,7 +250,7 @@ class Fb_ignited
 		return $friends;
 	}
 	
-	function fb_login_url($script=false, $scope = false)
+	function fb_login_url($script=false, $scope = false, $redirect = false)
 	{
 		/**
 		 * This method creates a login url that your users 
@@ -258,9 +261,13 @@ class Fb_ignited
 		{
 			$scope = $this->globals['fb_auth'];
 		}
+		if ($redirect === false)
+		{
+			$redirect = $this->globals['fb_canvas'];
+		}
 		$url = $this->CI->facebook->getLoginUrl(array(
-			'redirect_uri' => $this->globals['fb_canvas'],
-			'scope' => $scope
+			'scope' => $scope,
+			'redirect_uri' => $redirect
 		));
 		if ($script == true) { $url = "<script>top.location.href='".$url."'</script>"; }
 		return $url;
