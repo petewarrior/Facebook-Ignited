@@ -9,7 +9,7 @@ You can view CodeIgniter at http://codeigniter.com and Facebook PHP SDK at
 https://github.com/facebook/php-sdk/ if you have any bugs regarding them please 
 check their coresponding sites. 
 
-As of this this version I am using CI v2.1.1 & FB SDK v3.1.1.
+As of this this version I am using CI v2.1.2 & FB SDK v3.1.1.
 
 Thanks! And I hope you enjoy this preconfigured version of Facebook Ignited!
 
