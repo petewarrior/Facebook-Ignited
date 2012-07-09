@@ -1,5 +1,5 @@
 =====================================
-Facebook Ignited v1.0.10 Documentation
+Facebook Ignited v1.1.0 Documentation
 =====================================
 Both of the projects merged into this project are open source projects.
 I make no claim to their origin just the work put into expanding on them 
