@@ -273,6 +273,34 @@ class Fb_ignited
 		return $url;
 	}
 	
+	public function fb_post_to_feed_dialog($display, $link, $picture, $name, $caption, $description) {
+
+		/**
+		 * This function will generate a post to feed dialog
+		 */
+		$tofeed = "<script> 
+		FB.init({appId: '" . $this->CI->facebook->getAppId() . "', status: true, cookie: true});
+		function postToFeed() {
+			var obj = {
+			method: 'feed',
+			access_token: '" . $this->CI->facebook->getAccessToken() . "',
+			display: '" . $display . "',
+			link: '" . $link . "',
+			picture: '" . $picture . "',
+			name: '" . $name . "',
+			caption: '" . $caption . "',
+			description: '" . $description . "'
+			};
+			function callback(response) {
+			document.getElementById('msg').innerHTML = 'Post ID: ' + response['post_id'];
+			}
+			FB.ui(obj, callback);
+		}
+		postToFeed();
+		</script>";
+		return $tofeed;
+	}
+	
 	function fb_process_credits()
 	{
 		//error_reporting('NONE');
@@ -330,6 +358,57 @@ class Fb_ignited
 		}
 		$data['method'] = $func;
 		return json_encode($data);
+	}
+	
+	public function fb_request_dialog($display, $name){
+
+		/**
+		 * This function will generate a request dialog
+		 */
+		$send = "<script>
+			FB.init({appId: '" . $this->CI->facebook->getAppId() . "', frictionlessRequests: true,});
+
+			function sendrequest() {
+				FB.ui({
+				method: 'apprequests',
+				access_token: '" . $this->CI->facebook->getAccessToken() . "',
+				display: '" . $display . "',
+					message: '" . $name . "'
+
+				}, requestCallback);
+			}
+
+			function requestCallback(response) {
+
+			}
+
+			sendrequest();
+		</script>";
+
+		return $send;
+	}
+
+	public function fb_send_dialog($display, $link, $picture, $name, $to, $description){
+
+		 /**
+		 * This function will generate a send message dialog
+		 */
+		$send = "<script>
+			FB.init({appId: '" . $this->CI->facebook->getAppId() . "', xfbml: true, cookie: true});
+
+			FB.ui({
+				method: 'send',
+				access_token: '" . $this->CI->facebook->getAccessToken() . "',
+				display: '" . $display . "',
+				link: '" . $link . "',
+				picture: '" . $picture . "',
+				name: '" . $name . "',
+				description: '" . $description . "',
+				to: '" . $to . "'
+			});
+		</script>";
+
+		return $send;
 	}
 	
 	private function fb_set_globals($params)

@@ -131,7 +131,7 @@
 
 <p>The page you are looking at is being generated dynamically by CodeIgniter &amp; the Facebook SDK.</p>
 
-<p>You can can view the advanced features by clicking <a href="$login_login">this link</a> to authorize the app!</p>
+<p>You can can view the advanced features by clicking <a href="<?=$login_login?>">this link</a> to authorize the app!</p>
 
 <p>If you would like to edit this page you'll find it located at:</p>
 <code>application/views/welcome_message.php</code>
