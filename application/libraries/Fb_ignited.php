@@ -228,8 +228,12 @@ class Fb_ignited
 	
 	function fb_is_liked()
 	{
-		$request = $this->CI->facebook->getSignedRequest();
-		if($request['page']['liked'] || $request->page->liked) return true;
+		/**
+		 * This function checks to see if the user has liked the application or not.
+		 */
+		$user = $this->CI->facebook->getUser();
+		$request = $this->CI->facebook->api("$user/likes/APP_ID");
+		if($request['data'] || $request->data) return true;
 		else return false;
 	}
 	

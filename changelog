@@ -2,9 +2,10 @@
 ========== Change Log ==========
 ================================
 
-============ v1.1.0 ===========
+============ v1.1.0 ============
 # Added fb_post_to_feed_dialog(), fb_send_dialog() and fb_request_dialog() courtesy of Kimmik from CI Forums.
 # Resolved issues #4 & #6 regarding the demo login link being wrong. The variable was not not encased in <?= ?>
+# Updated fb_is_liked() function to correctly pull the like status.
 ============ v1.0.9 ============
 # Upgraded the CodeIgniter to v2.1.2
 ============ v1.0.8 ============
@@ -45,5 +46,6 @@
 # Consolidated the fb_get_me() & fb_get_session() functions into fb_get_me()
 ============ v1.0.2 ============
 # Support for both HTTP & HTTPS added.
+# Organized and edited core system to run better, especially when coming to configs. Added in minor security checks to check your configs for errors.
 # Shortened the require value in config for 'fb_canvas' to the value you placed in "Canvas Page" box in dev panel.
 # Removed type calling when using acceptance of friend requests, will only use model.
