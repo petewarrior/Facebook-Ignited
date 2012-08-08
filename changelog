@@ -3,8 +3,8 @@
 ================================
 
 ============ v1.1.0 ============
-# Added fb_post_to_feed_dialog(), fb_send_dialog() and fb_request_dialog() courtesy of Kimmik from CI Forums.
-# Resolved issues #4 & #6 regarding the demo login link being wrong. The variable was not not encased in <?= ?>
+# Added fb_post_to_feed_dialog(), fb_send_dialog(), fb_request_dialog() and fb_fql() courtesy of Kimmik from CI Forums.
+# Resolved issues #4 & #6 regarding the demo login link being wrong. The variable was not encased in <?= ?>
 # Updated fb_is_liked() function to correctly pull the like status.
 ============ v1.0.9 ============
 # Upgraded the CodeIgniter to v2.1.2
