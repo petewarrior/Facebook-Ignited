@@ -42,13 +42,11 @@ After that you can load the example page and start to learn from there!
 
 Once you have the system loaded for first time, please go and read: 
 
-https://bitbucket.org/deth4uall/facebook-ignited/wiki/Home 
-and 
-https://bitbucket.org/deth4uall/facebook-ignited/wiki/API
+https://github.com/deth4uall/Facebook-Ignited/wiki/Methods 
 
 It will explain what the features do. Please note that I will only provide limited support to 
-people who have editted their 'application/libraries/Fb_ignited.php' file. As stated at the top 
-of the file it can cause disruption of app stability, please wait for me to either reply with a fix 
+people who have edited their 'application/libraries/Fb_ignited.php' file. As stated at the top 
+of the file it can cause disruption of application stability, please wait for me to either reply with a fix 
 or upload a new version. I am quick to respond and will make every effort to find a solution.
 
 Instructions for Using Facebook Ignited
@@ -62,8 +60,8 @@ This will allow you to check if they are logged in, and if they are authenticate
 true it will redirect them to the correct page so that they may do so. It also allows you to view all of the 
 information from ->api('/me').
 
-Any and all facebook functions can be called via the ``$this->fb_ignited->api()`` format. If it is not within 
-Facebook Ignited class it will call it from the facebook class which is called via the fb_ignited system, acting 
+Any and all Facebook functions can be called via the ``$this->fb_ignited->api()`` format. If it is not within 
+Facebook Ignited class it will call it from the Facebook class which is called via the fb_ignited system, acting 
 as a shell for Facebook SDK. 
 
 As a added bonus the system now supports facebook credits, if you want use the system as it is create a database and 
