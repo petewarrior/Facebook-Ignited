@@ -273,6 +273,22 @@ class Fb_ignited
 		return $url;
 	}
 	
+	function fb_logout_url($next = '') {
+		/**
+		 * This method creates a logout url that your users 
+		 * can be redirected towards. If the $next variable is set 
+		 * user will be redirect to the $next controller function after the logout process.
+                 * $next must be in the declared canvas or end with /
+		 */
+                $redirect = (substr($this->globals['fb_canvas'], -1) == '/') ? $this->globals['fb_canvas'].$next : $this->globals['fb_canvas'].'/'.$next;
+            
+		$url = $this->CI->facebook->getLogoutUrl(array(
+			'next' => $redirect
+				));
+		
+		return $url;
+	}
+	
 	public function fb_post_to_feed_dialog($display, $link, $picture, $name, $caption, $description) {
 
 		/**
