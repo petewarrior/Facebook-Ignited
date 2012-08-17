@@ -200,6 +200,7 @@ class Fb_ignited {
 					endif;
 					exit;
 				}
+				return false;
 			}
 			return $me;
 		}
