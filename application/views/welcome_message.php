@@ -144,9 +144,9 @@
 
 	<p><a href='javascript:void();' onclick='sendRequest()'>Try a Request</a> | <a href='javascript:void();' onclick='sendfeed()'>Try Publishing to Your Feed</a></p>
 	<form name ="place_order" id="order_form" action="#">
-		<img src="http://www.facebook.com/images/gifts/21.png">
+		<img src="https://www.facebook.com/images/gifts/21.png">
 		<input type="hidden" name="item_id" value="1" id="item_id">
-		<img src="http://developers.facebook.com/attachment/credits_sm.png" 
+		<img src="https://developers.facebook.com/attachment/credits_sm.png" 
 			 height="25px">
 
 
