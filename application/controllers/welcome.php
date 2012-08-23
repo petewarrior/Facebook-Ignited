@@ -29,7 +29,7 @@ class Welcome extends CI_Controller {
 		{
 			$content_data['me'] = $this->fb_me;
 		}
-		$content_data['last_status'] = $this->fb_ignited->api('/me/feed?limit=1');
+		$content_data['last_status'] = $this->fb_ignited->api('/me/feed?limit=5');
 		$content_data['fb_app'] = $this->fb_app;
 		$content_data['login_login'] = $this->fb_ignited->fb_login_url();
 		$this->load->view('welcome_message', $content_data);
