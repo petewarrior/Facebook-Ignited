@@ -144,10 +144,12 @@
 
 	<p><a href='javascript:void();' onclick='sendRequest()'>Try a Request</a> | <a href='javascript:void();' onclick='sendfeed()'>Try Publishing to Your Feed</a></p>
 	
-	<p>View Your Last Five Feed Posts:<br />
-	<? foreach ($last_status['data'] as $value) {?>
+	<h2>View Up To Five of Your Feed's Posts:</h2>
+	<? foreach ($last_status['data'] as $value) { if ($value['type'] == 'status') { ?>
 		<code><?=$value['message'];?></code>
-	<?}?>
+	<?} elseif ($value['type'] == 'link') {?>
+		<code>You Liked a Link:<br /><a href="<?=$value['link']?>"><?=$value['name']?></a></code>
+	<?}}?>
 	</p>
 	
 	<form name ="place_order" id="order_form" action="#">
