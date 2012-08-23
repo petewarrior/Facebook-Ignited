@@ -144,14 +144,15 @@
 
 	<p><a href='javascript:void();' onclick='sendRequest()'>Try a Request</a> | <a href='javascript:void();' onclick='sendfeed()'>Try Publishing to Your Feed</a></p>
 	
-	<h2>View Up To Five of Your Feed's Posts:</h2>
+	<h3>View up to five of your feed's posts:</h3>
+	<p>
 	<? foreach ($last_status['data'] as $value) { if ($value['type'] == 'status') { ?>
 		<code><?=$value['message'];?></code>
 	<?} elseif ($value['type'] == 'link') {?>
 		<code>You Liked a Link:<br /><a href="<?=$value['link']?>"><?=$value['name']?></a></code>
 	<?}}?>
 	</p>
-	
+	<h3>Test out the process credit's method:</h3>
 	<form name ="place_order" id="order_form" action="#">
 		<img src="https://www.facebook.com/images/gifts/21.png">
 		<input type="hidden" name="item_id" value="1" id="item_id">
