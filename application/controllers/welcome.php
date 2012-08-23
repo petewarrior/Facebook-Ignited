@@ -7,7 +7,7 @@ class Welcome extends CI_Controller {
 		parent::__construct();		
 		
 		// The fb_ignited library is already auto-loaded so call the user and app.
-		$this->fb_me = $this->fb_ignited->fb_get_me();		
+		$this->fb_me = $this->fb_ignited->fb_get_me(true);		
 		$this->fb_app = $this->fb_ignited->fb_get_app();
 		
 		// This is a Request System I made to be used to work with Facebook Ignited.

@@ -189,7 +189,7 @@ class Fb_ignited {
 		 */
 		$this->CI->load->helper('url');
 		$user = $this->CI->facebook->getUser();
-		if ($user) {
+		if ($user > 0) {
 			try {
 				$me = $this->CI->facebook->api('/me');
 			} catch (FacebookApiException $e) {
@@ -203,8 +203,7 @@ class Fb_ignited {
 				return false;
 			}
 			return $me;
-		}
-		else {
+		} else {
 			if ($redirect == true) {
 				if ($script == true): echo $this->fb_login_url(true);
 				else: $loc = $this->fb_login_url();
@@ -267,7 +266,7 @@ class Fb_ignited {
 		$url = $this->CI->facebook->getLoginUrl(array(
 			'scope' => $scope,
 			'redirect_uri' => $redirect
-				));
+		));
 		if ($script == true) {
 			$url = "<script>top.location.href='" . $url . "'</script>";
 		}
