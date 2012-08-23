@@ -141,7 +141,7 @@
 
 <p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
 
-<p>You can view the source code at: <a href="https://bitbucket.org/deth4uall/facebook-ignited/" target="_blank">https://bitbucket.org/deth4uall/facebook-ignited/</a> & <a href="https://github.com/deth4uall/facebook-ignited/" target="_blank">https://github.com/deth4uall/facebook-ignited/</a></p>
+<p>You can view the source code at: <a href="https://github.com/Necromnius/Facebook-Ignited/" target="_blank">https://github.com/Necromnius/Facebook-Ignited/</a></p>
 
 <p><a href='javascript:void();' onclick='sendRequest()'>Try a Request</a> | <a href='javascript:void();' onclick='sendfeed()'>Try Publishing to Your Feed</a></p>
 <form name ="place_order" id="order_form" action="#">
