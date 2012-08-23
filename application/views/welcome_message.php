@@ -148,10 +148,8 @@
 	<p>
 	<? foreach ($last_status['data'] as $value) { if ($value['type'] == 'status') { ?>
 		<code><?=$value['message'];?></code>
-	<?} elseif ($value['type'] == 'link') {?>
-		<code>You Liked a Link:<br /><a href="<?=$value['link']?>"><?=$value['name']?></a></code>
-	<?} elseif ($value['type'] == 'photo') {?>
-		<code>You Liked a Photo:<br /><a href="<?=$value['link']?>"><?=$value['name']?></a></code>
+	<?} elseif ($value['type'] == 'link' || $value['type'] == 'photo') {?>
+		<code>You Liked a <?=ucwords($value['type'])?>:<br /><a href="<?=$value['link']?>" target="_blank"><?=$value['name']?></a></code>
 	<?}}?>
 	</p>
 	<h3>Test out the process credit's method:</h3>
