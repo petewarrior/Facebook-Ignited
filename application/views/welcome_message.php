@@ -42,8 +42,8 @@
 	}
 	
 	</style>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-	<script src="http://connect.facebook.net/en_US/all.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<script src="//connect.facebook.net/en_US/all.js"></script>
  		<script>
 	    $(document).ready(function(){
 			FB.init({ 
@@ -60,7 +60,7 @@
 		   {
 		     method: 'feed',
 		     name: 'Facebook Ignited: The Open Source Facebook Framework',
-		     link: 'http://apps.facebook.com/facebook-ignited/',
+		     link: 'https://apps.facebook.com/facebook-ignited/',
 		     picture: '',
 		     caption: 'Check out this awesome free script!',
 		     description: '<?php if (isset($me)): echo $me['first_name'].","; endif; ?> just checked out Facebook Ignited! Be the first of their friends to do so!',
