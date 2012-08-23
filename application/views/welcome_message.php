@@ -144,9 +144,9 @@
 
 	<p><a href='javascript:void();' onclick='sendRequest()'>Try a Request</a> | <a href='javascript:void();' onclick='sendfeed()'>Try Publishing to Your Feed</a></p>
 	
-	<p>View Your Last Feed Post:<br />
+	<p>View Your Last Five Feed Posts:<br />
 	<? foreach ($last_status['data'] as $value) {?>
-		<?=$value['message'];?>
+		<code><?=$value['message'];?></code>
 	<?}?>
 	</p>
 	
