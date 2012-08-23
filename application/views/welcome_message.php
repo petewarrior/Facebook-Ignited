@@ -150,6 +150,8 @@
 		<code><?=$value['message'];?></code>
 	<?} elseif ($value['type'] == 'link') {?>
 		<code>You Liked a Link:<br /><a href="<?=$value['link']?>"><?=$value['name']?></a></code>
+	<?} elseif ($value['type'] == 'photo') {?>
+		<code>You Liked a Photo:<br /><a href="<?=$value['link']?>"><?=$value['name']?></a></code>
 	<?}}?>
 	</p>
 	<h3>Test out the process credit's method:</h3>
