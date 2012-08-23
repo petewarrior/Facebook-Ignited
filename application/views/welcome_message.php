@@ -143,6 +143,13 @@
 	<p>You can view the source code at: <a href="https://github.com/Necromnius/Facebook-Ignited/" target="_blank">https://github.com/Necromnius/Facebook-Ignited/</a></p>
 
 	<p><a href='javascript:void();' onclick='sendRequest()'>Try a Request</a> | <a href='javascript:void();' onclick='sendfeed()'>Try Publishing to Your Feed</a></p>
+	
+	<p>View Your Last Feed Post:<br />
+	<? foreach ($data as $value) {?>
+		<?=$value['message'];?>
+	<?}?>
+	</p>
+	
 	<form name ="place_order" id="order_form" action="#">
 		<img src="https://www.facebook.com/images/gifts/21.png">
 		<input type="hidden" name="item_id" value="1" id="item_id">
