@@ -35,6 +35,18 @@ class Fb_ignited {
 			return false;
 		}
 	}
+	
+	// begin for FB Page App auth
+	function getSignedRequest($req) {
+		$fbdata = $this->CI->facebook->getSignedRequest();
+		return $fbdata;
+	}
+	
+	function set_signed_request($req) {
+		$this->signed_request = $req;
+	}
+	
+	// end for FB Page App auth
 
 	function fb_accept_requests($request_ids, $callback = false) {
 		/**
